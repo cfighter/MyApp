@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.news {
+	cursor: pointer;
+    width: 95%;
+    height: 75px;
+    padding: 5px 5px 6px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-content;
+    overflow: hidden;
+    .right {
+        float: right;
+        box-sizing: border-box;
+        width: 75px;
+        height: 75px;
+        &>img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .left {
+        margin-right: 80px;
+        height: inherit;
+        position:relative;
+        h4 {
+            padding-bottom: 5px;
+        }
+        p {
+        	position: absolute;
+        	bottom:0;
+            color: #777;
+            font-size: 10px;
+            margin-top: 13px;
+            span {
+                height: 25px;
+                line-height: 25px;
+                padding-right: 20px;
+            }
+            .from img {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        }
+    }
+}

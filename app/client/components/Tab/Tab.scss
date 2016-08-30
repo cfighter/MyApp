@@ -1,0 +1,23 @@
+$count:3;
+$bgcolor:#fff;
+*{
+	padding:0;
+	margin:0;
+}
+.tab-list{
+	width: 100%;	
+	list-style: none;
+	li{
+		display:inline-block;
+		box-sizing:border-box;
+		width:(1/$count*100%);		
+		text-align: center;	
+		height:33px;
+		line-height:33px;
+		font-size: 15px;	
+		border-bottom: 2px solid $bgcolor;	
+		&.active{		
+			border-bottom: 2px solid red;
+		}
+	}
+}

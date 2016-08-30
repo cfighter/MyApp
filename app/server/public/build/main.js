@@ -63,9 +63,9 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _index = __webpack_require__(202);
+	var _News = __webpack_require__(206);
 
-	var _index2 = _interopRequireDefault(_index);
+	var _News2 = _interopRequireDefault(_News);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -74,6 +74,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	/*import Slider from './components/Slider/index.js';*/
+	/*import Tab from './components/Tab/Tab.js';*/
+
 
 	var App = function (_React$Component) {
 		_inherits(App, _React$Component);
@@ -90,7 +93,17 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_index2.default, null)
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null),
+					_react2.default.createElement(_News2.default, null)
 				);
 			}
 		}]);
@@ -21542,46 +21555,8 @@
 
 /***/ },
 /* 176 */,
-/* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(178);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(180)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./slider.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./slider.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(179)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "* {\n  padding: 0;\n  margin: 0; }\n\n.slider {\n  overflow: hidden;\n  width: 100%px;\n  height: auto;\n  margin: 0 auto;\n  position: relative; }\n  .slider > ul {\n    height: auto;\n    overflow: hidden;\n    position: relative;\n    /* left:0;\r\n    transition: 1s;  */ }\n  .slider .slider-item {\n    display: inline-block;\n    height: auto;\n    float: left; }\n    .slider .slider-item img {\n      display: block;\n      height: auto;\n      width: 100%; }\n  .slider .slider-arrow {\n    display: inline-block;\n    color: #fff;\n    font-size: 50px;\n    position: absolute;\n    top: 50%;\n    margin-top: -50px;\n    z-index: 100;\n    padding: 20px;\n    cursor: pointer;\n    font-weight: bold; }\n    .slider .slider-arrow:hover {\n      background: rgba(0, 0, 0, 0.2); }\n    .slider .slider-arrow.slider-arrow-right {\n      right: 0; }\n    .slider .slider-arrow.slider-arrow-left {\n      left: 0; }\n  .slider .slider-dots-wrap {\n    z-index: 99;\n    text-align: center;\n    width: 100%;\n    position: absolute;\n    bottom: 0; }\n    .slider .slider-dots-wrap .slider-dot {\n      display: inline-block;\n      width: 6px;\n      height: 6px;\n      border: 1px solid #ccc;\n      margin: 6px;\n      cursor: pointer;\n      border-radius: 20px; }\n      .slider .slider-dots-wrap .slider-dot.slider-dot-selected {\n        background: #ccc; }\n", ""]);
-
-	// exports
-
-
-/***/ },
+/* 177 */,
+/* 178 */,
 /* 179 */
 /***/ function(module, exports) {
 
@@ -21902,176 +21877,19 @@
 /* 191 */,
 /* 192 */,
 /* 193 */,
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _SliderItems = __webpack_require__(195);
-
-	var _SliderItems2 = _interopRequireDefault(_SliderItems);
-
-	var _SliderDots = __webpack_require__(198);
-
-	var _SliderDots2 = _interopRequireDefault(_SliderDots);
-
-	var _SLiderArrows = __webpack_require__(199);
-
-	var _SLiderArrows2 = _interopRequireDefault(_SLiderArrows);
-
-	var _getDirection = __webpack_require__(197);
-
-	var _getDirection2 = _interopRequireDefault(_getDirection);
-
-	__webpack_require__(177);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Slider = function (_React$Component) {
-	  _inherits(Slider, _React$Component);
-
-	  function Slider() {
-	    _classCallCheck(this, Slider);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Slider).call(this));
-
-	    _this.state = {
-	      currentIndex: 0
-	    };
-	    return _this;
-	  }
-
-	  _createClass(Slider, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var $this = this;
-	      this.autoPlay();
-	      var startX = void 0,
-	          startY = void 0,
-	          endX = void 0,
-	          endY = void 0,
-	          direction = void 0;
-	      document.querySelector('.slider-items-wrap').addEventListener('touchstart', function (ev) {
-	        startX = ev.touches[0].pageX;
-	        startY = ev.touches[0].pageY;
-	      }, false);
-	      /*document.querySelector('.slider-items-wrap').addEventListener('touchmove',function(ev) {
-	      	endX = ev.changedTouches[0].pageX;
-	            	endY = ev.changedTouches[0].pageY;
-	            event.preventDefault(); 		     
-	            var offset = (endX - startX) / window.innerWidth / (3 + 2) * 100;
-	            var cur_x = offset;
-	            document.querySelector('.slider-items-wrap').style.transform = "translate3d(" + cur_x + "%,0,0)";
-	         
-	      },false);*/
-	      document.querySelector('.slider-items-wrap').addEventListener('touchend', function (ev) {
-	        endX = ev.changedTouches[0].pageX;
-	        endY = ev.changedTouches[0].pageY;
-	        direction = (0, _getDirection2.default)(startX, startY, endX, endY);
-	        switch (direction) {
-	          case 3:
-	            {
-	              $this.handleSelect(1);
-	              break;
-	            }
-	          case 4:
-	            {
-	              $this.handleSelect(-1);
-	              break;
-	            }default:
-	        }
-	      }, false);
-	    }
-	  }, {
-	    key: 'autoPlay',
-	    value: function autoPlay() {
-	      this.play = setInterval(this.handleSelect.bind(this, 1), 3000);
-	    }
-	  }, {
-	    key: 'handleSelect',
-	    value: function handleSelect(option) {
-	      clearInterval(this.play);
-	      document.querySelector('.slider-items-wrap').style.transitionDuration = 0.8 + 's';
-	      var index = this.state.currentIndex + option;
-	      this.setState({
-	        currentIndex: index
-	      });
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      var _this2 = this;
-
-	      clearInterval(this.play);
-	      if (this.state.currentIndex == -1) {
-	        setTimeout(function () {
-	          document.querySelector('.slider-items-wrap').style.transitionDuration = 0 + 's';
-	          _this2.setState({
-	            currentIndex: _this2.props.items.length - 1
-	          });
-	        }, 800);
-	      } else if (this.state.currentIndex == this.props.items.length) {
-	        setTimeout(function () {
-	          document.querySelector('.slider-items-wrap').style.transitionDuration = 0 + 's';
-	          _this2.setState({
-	            currentIndex: 0
-	          });
-	        }, 800);
-	      }
-	      this.autoPlay();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'slider' },
-	        _react2.default.createElement(_SliderItems2.default, { items: this.props.items, currentIndex: this.state.currentIndex }),
-	        _react2.default.createElement(_SliderDots2.default, { count: this.props.items.length, currentIndex: this.state.currentIndex, handleSelect: this.handleSelect.bind(this) }),
-	        _react2.default.createElement(_SLiderArrows2.default, { handleSelect: this.handleSelect.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return Slider;
-	}(_react2.default.Component);
-
-	exports.default = Slider;
-
-	Slider.defaultProps = {
-	  items: [{
-	    src: './images/1.jpg',
-	    title: '测试1',
-	    alt: 'describe1'
-	  }, {
-	    src: './images/2.jpg',
-	    title: '测试2',
-	    alt: 'describe2'
-	  }, {
-	    src: './images/3.jpg',
-	    title: '测试3',
-	    alt: 'describe3'
-	  }]
-	};
-
-/***/ },
-/* 195 */
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22086,9 +21904,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SliderItem = __webpack_require__(196);
-
-	var _SliderItem2 = _interopRequireDefault(_SliderItem);
+	__webpack_require__(207);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22098,276 +21914,90 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var SliderItems = function (_React$Component) {
-		_inherits(SliderItems, _React$Component);
+	var News = function (_React$Component) {
+		_inherits(News, _React$Component);
 
-		function SliderItems() {
-			_classCallCheck(this, SliderItems);
+		function News() {
+			_classCallCheck(this, News);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(SliderItems).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(News).apply(this, arguments));
 		}
 
-		_createClass(SliderItems, [{
-			key: 'render',
-			value: function render() {
-				var length = this.props.items.length;
-				var count = length + 2;
-				var style = {
-					transform: 'translateX(' + (-100 / count - 100 / count * this.props.currentIndex) + '%)',
-					width: count * 100 + '%'
-				};
-				return _react2.default.createElement(
-					'ul',
-					{ className: 'slider-items-wrap', style: style },
-					_react2.default.createElement(_SliderItem2.default, { item: this.props.items[length - 1], key: 'item-x', count: count }),
-					this.props.items.map(function (item, index) {
-						return _react2.default.createElement(_SliderItem2.default, { key: 'items-' + index, item: item, count: count });
-					}),
-					_react2.default.createElement(_SliderItem2.default, { item: this.props.items[0], key: 'item-y', count: count })
-				);
-			}
-		}]);
-
-		return SliderItems;
-	}(_react2.default.Component);
-
-	exports.default = SliderItems;
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SliderItem = function (_React$Component) {
-		_inherits(SliderItem, _React$Component);
-
-		function SliderItem() {
-			_classCallCheck(this, SliderItem);
-
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(SliderItem).apply(this, arguments));
-		}
-
-		_createClass(SliderItem, [{
-			key: 'render',
-			value: function render() {
-				var width = 100 / this.props.count + '%';
-				var style = { width: width };
-				return _react2.default.createElement(
-					'li',
-					{ className: 'slider-item', style: style },
-					_react2.default.createElement(
-						'a',
-						{ href: this.props.item.url },
-						_react2.default.createElement('img', { src: this.props.item.src, alt: this.props.item.alt })
-					)
-				);
-			}
-		}]);
-
-		return SliderItem;
-	}(_react2.default.Component);
-
-	exports.default = SliderItem;
-
-/***/ },
-/* 197 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	//获取角度
-	var getSlideAngle = function getSlideAngle(dx, dy) {
-	    return Math.atan2(dy, dx) * 180 / Math.PI;
-	};
-	//根据起点和终点返回方向 
-	//1：向上，2：向下，3：向左，4：向右,0：未滑动
-	var getDirection = function getDirection(startX, startY, endX, endY) {
-	    var dy = startY - endY;
-	    var dx = endX - startX;
-	    var result = 0;
-	    //如果滑动距离太短
-	    if (Math.abs(dx) < 5 && Math.abs(dy) < 5) {
-	        return result;
-	    }
-	    var angle = getSlideAngle(dx, dy);
-	    if (angle >= -45 && angle < 45) {
-	        result = 4;
-	    } else if (angle >= 45 && angle < 135) {
-	        result = 1;
-	    } else if (angle >= -135 && angle < -45) {
-	        result = 2;
-	    } else if (angle >= 135 && angle <= 180 || angle >= -180 && angle < -135) {
-	        result = 3;
-	    }
-	    return result;
-	};
-	exports.default = getDirection;
-
-/***/ },
-/* 198 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(200);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SliderDots = function (_React$Component) {
-		_inherits(SliderDots, _React$Component);
-
-		function SliderDots() {
-			_classCallCheck(this, SliderDots);
-
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(SliderDots).apply(this, arguments));
-		}
-
-		_createClass(SliderDots, [{
-			key: 'handleSelect',
-			value: function handleSelect(option) {
-				this.props.handleSelect(option);
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var _this2 = this;
-
-				var dots = [];
-				for (var i = 0; i < this.props.count; i++) {
-					dots.push('');
-				};
-				var dotsList = dots.map(function (d, index) {
-					return _react2.default.createElement('li', { key: 'dot-' + index,
-						className: 'slider-dot ' + (_this2.props.currentIndex === index ? 'slider-dot-selected' : ''),
-						onClick: _this2.handleSelect.bind(_this2, index - _this2.props.currentIndex) });
-				});
-				return _react2.default.createElement(
-					'ul',
-					{ className: 'slider-dots-wrap' },
-					dotsList
-				);
-			}
-		}]);
-
-		return SliderDots;
-	}(_react2.default.Component);
-
-	exports.default = SliderDots;
-
-/***/ },
-/* 199 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SliderArrows = function (_React$Component) {
-		_inherits(SliderArrows, _React$Component);
-
-		function SliderArrows() {
-			_classCallCheck(this, SliderArrows);
-
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(SliderArrows).apply(this, arguments));
-		}
-
-		_createClass(SliderArrows, [{
-			key: 'handleSelect',
-			value: function handleSelect(option) {
-				this.props.handleSelect(option);
-			}
-		}, {
+		_createClass(News, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ className: 'slider-arrows-wrap' },
+					{ className: 'news' },
 					_react2.default.createElement(
-						'span',
-						{
-							className: 'slider-arrow slider-arrow-left',
-							onClick: this.handleSelect.bind(this, -1) },
-						'<'
+						'div',
+						{ className: 'right' },
+						_react2.default.createElement('img', { src: this.props.news.img.src, alt: this.props.news.img.alt })
 					),
 					_react2.default.createElement(
-						'span',
-						{
-							className: 'slider-arrow slider-arrow-right',
-							onClick: this.handleSelect.bind(this, 1) },
-						'>'
+						'div',
+						{ className: 'left' },
+						_react2.default.createElement(
+							'h4',
+							null,
+							this.props.news.title
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'from' },
+								_react2.default.createElement('img', { src: this.props.news.from.src, alt: '' }),
+								this.props.news.from.name
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'read' },
+								this.props.news.read,
+								'阅读'
+							),
+							_react2.default.createElement(
+								'span',
+								{ className: 'comment' },
+								this.props.news.comment,
+								'评论'
+							)
+						)
 					)
 				);
 			}
 		}]);
 
-		return SliderArrows;
+		return News;
 	}(_react2.default.Component);
 
-	exports.default = SliderArrows;
+	exports.default = News;
+
+	News.defaultProps = {
+		news: {
+			title: '清华教师被冒充公检法电信诈骗1760万元 警方介入',
+			from: {
+				name: '新华社',
+				src: 'http://img0.bdstatic.com/img/image/PPT820.jpg'
+			},
+			read: '202',
+			comment: '123',
+			img: {
+				src: 'http://t2.baidu.com/it/u=http%3A%2F%2Fpaper.people.com.cn%2Frmrb%2Fres%2F2016-08%2F23%2F17%2Frmrb2016082317p9_b.jpg&fm=30',
+				alt: '测试'
+			}
+		}
+	};
 
 /***/ },
-/* 200 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(201);
+	var content = __webpack_require__(208);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(180)(content, {});
@@ -22376,8 +22006,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./SliderDots.scss", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./SliderDots.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./News.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./News.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22387,7 +22017,7 @@
 	}
 
 /***/ },
-/* 201 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(179)();
@@ -22395,28 +22025,10 @@
 
 
 	// module
-	exports.push([module.id, ".slider-dots-wrap {\n  z-index: 99;\n  text-align: center;\n  width: 100%;\n  position: absolute;\n  bottom: 0; }\n  .slider-dots-wrap .slider-dot {\n    display: inline-block;\n    width: 6px;\n    height: 6px;\n    border: 1px solid #ccc;\n    margin: 6px;\n    cursor: pointer;\n    border-radius: 20px; }\n    .slider-dots-wrap .slider-dot.slider-dot-selected {\n      background: #ccc; }\n", ""]);
+	exports.push([module.id, "* {\n  padding: 0;\n  margin: 0; }\n\n.news {\n  cursor: pointer;\n  width: 95%;\n  height: 75px;\n  padding: 5px 5px 6px;\n  margin: 0 auto;\n  border-bottom: 1px solid #ccc;\n  box-sizing: border-content;\n  overflow: hidden; }\n  .news .right {\n    float: right;\n    box-sizing: border-box;\n    width: 75px;\n    height: 75px; }\n    .news .right > img {\n      width: 100%;\n      height: 100%; }\n  .news .left {\n    margin-right: 80px;\n    height: inherit;\n    position: relative; }\n    .news .left h4 {\n      padding-bottom: 5px; }\n    .news .left p {\n      position: absolute;\n      bottom: 0;\n      color: #777;\n      font-size: 10px;\n      margin-top: 13px; }\n      .news .left p span {\n        height: 25px;\n        line-height: 25px;\n        padding-right: 20px; }\n      .news .left p .from img {\n        width: 14px;\n        height: 14px;\n        border-radius: 50%;\n        margin-right: 5px; }\n", ""]);
 
 	// exports
 
-
-/***/ },
-/* 202 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Slider = __webpack_require__(194);
-
-	var _Slider2 = _interopRequireDefault(_Slider);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _Slider2.default;
 
 /***/ }
 /******/ ]);
