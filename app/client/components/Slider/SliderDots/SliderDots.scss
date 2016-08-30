@@ -1,0 +1,19 @@
+.slider-dots-wrap {
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    .slider-dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border: 1px solid #ccc;
+        margin: 6px;
+        cursor: pointer;
+        border-radius: 20px;
+        &.slider-dot-selected {
+            background: #ccc;
+        }
+    }
+}

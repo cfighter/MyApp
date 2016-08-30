@@ -4,24 +4,25 @@
 }
 .slider {
   overflow: hidden;
-  width: 800px;
-  height:450px;
-  margin:10px auto;
+  width: 100%px;
+  height:auto;
+  margin:0 auto;
   position: relative;
 
   &>ul {
     height: auto;
     overflow: hidden;
     position: relative;
-    left:0;
-    transition: 1s; 
+    /* left:0;
+    transition: 1s;  */
   }
 
   .slider-item {
     display: inline-block;
     height: auto;
+    float:left;
 
-    &>img {
+    img {
       display: block;
       height: auto;
       width: 100%;
@@ -63,15 +64,10 @@
       display: inline-block;
       width: 6px;
       height: 6px;
-      border: 3px solid #ccc;
+      border: 1px solid #ccc;
       margin: 6px;
       cursor: pointer;
       border-radius: 20px;
-
-      &:hover {
-        border: 3px solid #868686;
-      }
-
       &.slider-dot-selected {
         background: #ccc;
       }

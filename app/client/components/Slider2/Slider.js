@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import getDirection from './direction.js'
 import './slider.scss';
 
 class SliderDots extends React.Component{
@@ -54,23 +55,48 @@ class Slider extends React.Component{
 		}
 	}
 	componentDidMount(){
+		const $this=this;
 		this.autoPlay();
+		let startX, startY, endX, endY,dir;
+		document.querySelector('.slider').addEventListener('touchstart',function(ev){
+			startX = ev.touches[0].pageX;
+        	startY = ev.touches[0].pageY;
+		},false);
+		document.querySelector('.slider').addEventListener('touchend',function(ev){
+			endX = ev.changedTouches[0].pageX;
+        	endY = ev.changedTouches[0].pageY;
+        	dir=getDirection(startX, startY, endX, endY);
+        	switch(dir){
+        		case 3:{
+        			$this.handleDotSelect(1);
+        			break;
+        		}
+        		case 4:{
+        			$this.handleDotSelect(-1)
+        			break;
+        		}default:   
+        	}
+		},false);
+		
 	}
 	autoPlay(){
+		clearInterval(this.Play);
 		this.Play=setInterval(this.play.bind(this,1),3000)
 	}
 	handleDotSelect(option){
+		clearInterval(this.Play);
 		if(option<0){
 			this.setState({
 				direction:-1
 			})
 		}		
-		this.play(option);
 		setTimeout(()=>{
 			this.setState({
 				direction:1
 			})
-		},900)
+			this.autoPlay()
+		},500)
+		this.play(option);
 		
 	}
 	play(option){
@@ -92,17 +118,19 @@ class Slider extends React.Component{
 	render(){
 		const item=this.props.items[this.state.currentIndex];
 		return(
-			<div className='slider'
-				onMouseOver={this.pausePlay.bind(this)}
-				onMouseOut={this.autoPlay.bind(this)}
-			>
-				<ReactCSSTransitionGroup ref='tr' transitionName={this.state.direction==1?'slider-item':'slider-left'} transitionEnterTimeout={800} transitionLeaveTimeout={800}>
+			
+			<div className='slider'>
+			{/*<div className='slider'
+							onMouseOver={this.pausePlay.bind(this)}
+							onMouseOut={this.autoPlay.bind(this)}
+						>*/}
+				<ReactCSSTransitionGroup ref='tr' transitionName={this.state.direction==1?'slider-item':'slider-left'} transitionEnterTimeout={500} transitionLeaveTimeout={500}>
 					<a href={item.href} key={'slider-item-'+this.state.currentIndex}>
 						<img src={item.src} alt={item.alt}/>
 					</a>					
 				</ReactCSSTransitionGroup>
 				<SliderDots count={this.props.items.length} currentIndex={this.state.currentIndex} handleDotSelect={this.handleDotSelect.bind(this)}/>
-				<SliderArrows handleArrowClick={this.handleDotSelect.bind(this)}/>
+			{/*<SliderArrows handleArrowClick={this.handleDotSelect.bind(this)}/>*/}
 			</div>
 		)
 	}
@@ -110,15 +138,15 @@ class Slider extends React.Component{
 export default Slider;
 Slider.defaultProps={
 	items:[{
-		src:'./images/1.jpg',
+		src:'http://img2.imgtn.bdimg.com/it/u=1346329280,89502990&fm=11&gp=0.jpg',
 		title:'测试1',
 		alt:'describe1'
 	},{
-		src:'./images/2.jpg',
+		src:'http://img5.imgtn.bdimg.com/it/u=1285570517,2864562204&fm=11&gp=0.jpg',
 		title:'测试2',
 		alt:'describe2'
 	},{
-		src:'./images/3.jpg',
+		src:'http://img2.imgtn.bdimg.com/it/u=2342726223,3244749003&fm=11&gp=0.jpg',
 		title:'测试3',
 		alt:'describe3'
 	}]
