@@ -11,8 +11,11 @@ class App extends React.Component{
 				<News/>
 				<News/>
 				<News/>
+<<<<<<< HEAD
 
 				<News/>
+=======
+>>>>>>> 55e738ffc21d69a3ff3df25b183f896a04b23136
 			</div>
 		)
 	}
