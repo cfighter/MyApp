@@ -11,15 +11,6 @@ class App extends React.Component{
 				<News/>
 				<News/>
 				<News/>
-
-				<News/>
-
-				<News/>
-				<News/>
-				<News/>
-				<News/>
-				<News/>
-				<News/>
 			</div>
 		)
 	}
